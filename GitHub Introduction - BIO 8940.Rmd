@@ -1,0 +1,41 @@
+---
+title: "GitHub Introduction - BIO 8940"
+author: "Roisin Kierstead"
+date: "2023-01-24"
+output: html_document
+---
+
+Following module 3 practical exercise at https://bio8940-uottawa.github.io/class_book/3.2-practical-1.html#
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+install.packages("usethis")
+library(usethis)
+
+usethis::git_sitrep()
+usethis::use_git_config(
+  user.name = "roisinkierstead",
+  user.email = "roisinkierstead@gmail.com")
+```
+
+```{r}
+usethis::create_github_token()
+#this is the generated token: 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
+credentials::set_github_pat()
+# If prompted for GitHub credentials, enter your PAT in the password field
+```
+
+```{r}
+#create R project
+usethis::use_git()
+
+#restart R
+usethis::use_github()
+usethis::git_vaccinate()
+```
+
