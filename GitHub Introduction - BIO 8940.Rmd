@@ -39,7 +39,14 @@ usethis::use_git_config(
 usethis::git_vaccinate() #from help panel: Adds .DS_Store, .Rproj.user, .Rdata, .Rhistory, and .httr-oauth to your global (a.k.a. user-level) .gitignore. This is good practice as it decreases the chance that you will accidentally leak credentials to GitHub.
 ```
 
+###Issues with token?
 ```{r}
-
+library(usethis)
+gh_token_help()
 ```
 
+
+###Practice commiting after new changes
+```{r}
+cars
+hist(cars$speed)
