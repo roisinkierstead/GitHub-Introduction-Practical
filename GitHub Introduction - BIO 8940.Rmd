@@ -13,15 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r}
-install.packages("usethis")
-library(usethis)
-
-usethis::git_sitrep()
-usethis::use_git_config(
-  user.name = "roisinkierstead",
-  user.email = "roisinkierstead@gmail.com")
-```
 
 ```{r}
 usethis::create_github_token()
@@ -31,11 +22,24 @@ credentials::set_github_pat()
 ```
 
 ```{r}
-#create R project
+#create R project first, then
+install.packages("usethis")
+library(usethis)
 usethis::use_git()
 
-#restart R
-usethis::use_github()
-usethis::git_vaccinate()
+#then restart R
+
+#connect r to github
+usethis::git_sitrep()
+usethis::use_git_config(
+  user.name = "roisinkierstead",
+  user.email = "roisinkierstead@gmail.com")
+
+
+usethis::git_vaccinate() #from help panel: Adds .DS_Store, .Rproj.user, .Rdata, .Rhistory, and .httr-oauth to your global (a.k.a. user-level) .gitignore. This is good practice as it decreases the chance that you will accidentally leak credentials to GitHub.
+```
+
+```{r}
+
 ```
 
