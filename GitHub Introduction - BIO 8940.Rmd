@@ -50,4 +50,9 @@ gh_token_help()
 ```{r}
 cars
 hist(cars$speed)
+=======
+
+
+usethis::git_vaccinate() #from help panel: Adds .DS_Store, .Rproj.user, .Rdata, .Rhistory, and .httr-oauth to your global (a.k.a. user-level) .gitignore. This is good practice as it decreases the chance that you will accidentally leak credentials to GitHub.
 ```
+
