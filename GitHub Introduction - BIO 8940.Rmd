@@ -50,3 +50,4 @@ gh_token_help()
 ```{r}
 cars
 hist(cars$speed)
+```
